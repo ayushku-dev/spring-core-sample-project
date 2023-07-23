@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="custObject" class="com.accenture.lkm.Customer">
+        <constructor-arg value="987" name="customerId"></constructor-arg>
+        <constructor-arg value="Kaushal" name="name"></constructor-arg>
+        <constructor-arg ref="orderObject" name="order"></constructor-arg>
+
+    </bean>
+
+    <bean id="orderObject" class="com.accenture.lkm.Order">
+        <property name="orderId" value="1"></property>
+        <property name="amount" value="1911.30"></property>
+    </bean>
+
+</beans>
